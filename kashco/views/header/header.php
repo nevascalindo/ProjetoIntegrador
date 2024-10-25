@@ -13,7 +13,7 @@
     <li><a href="../views/sobre.php">Sobre</a></li>
     <li><a href="../views/contato.php">Contato</a></li>
     <li><a href="#">Carrinho</a></li>
-    <li><a href="#">Minha Conta</a></li>
+    <li><a href="../views/login.php">Minha Conta</a></li>
   </ul>
 </nav>
 

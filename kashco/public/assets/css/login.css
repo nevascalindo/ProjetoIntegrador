@@ -1,0 +1,114 @@
+.logindescer {
+ margin-top: 180px;
+}
+
+.login-container {
+    max-width: 700px;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    margin: auto; /* Certifica que a container está centralizada */
+}
+
+.login-container h2 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-family: "Roboto Mono", monospace;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-top: 1rem;
+    color: var(--text-light);
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Roboto Mono", monospace;
+}
+
+.login-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.register-text {
+    margin-top: 1.5rem;
+    color: var(--text-light);
+}
+
+.register-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 90%; /* Reduz o tamanho para 90% da tela no mobile */
+        padding: 1.5rem; /* Ajusta o padding */
+    }
+    
+    .login-container h2 {
+        font-size: 1.5rem; /* Tamanho menor para o título */
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+        font-size: 1rem; /* Tamanho de fonte menor */
+        padding: 0.5rem; /* Menor padding nos inputs */
+    }
+
+    .login-button {
+        font-size: 1rem; /* Fonte menor no botão */
+        padding: 0.75rem; /* Mantém o botão confortável para cliques */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        max-width: 95%; /* Ajusta ainda mais para telas muito pequenas */
+        padding: 1rem; /* Reduz o padding */
+    }
+
+    .login-container h2 {
+        font-size: 1.25rem; /* Título ainda menor */
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: 0.5rem; /* Mantém os campos de input menores */
+    }
+
+    .login-button {
+        font-size: 0.9rem; /* Botão menor */
+        padding: 0.5rem; /* Reduz o padding do botão */
+    }
+}
