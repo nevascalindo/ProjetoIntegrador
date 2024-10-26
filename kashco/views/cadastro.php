@@ -17,7 +17,7 @@ require_once "./header/header.php"
     <section class="logindescer">
         <div class="login-container">
             <h2>Cadastre-se</h2>
-            <form action="process_cadastro.php" method="POST">
+            <form action="../src/cadastrouser.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
 
@@ -36,6 +36,18 @@ require_once "./header/header.php"
             </form>
         </div>
     </section>
+    <script>
+        function validarSenha() {
+            var senha = document.getElementById("senha").value;
+            var confirmaSenha = document.getElementById("confirma_senha").value;
+
+            if (senha !== confirmaSenha) {
+                alert("As senhas não coincidem.");
+                return false;
+            }
+            return true;
+        }
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 

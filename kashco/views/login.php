@@ -18,7 +18,7 @@ require_once "./header/header.php"
     <section class="logindescer">
     <div class="login-container">
         <h2>Login</h2>
-        <form action="process_login.php" method="POST">
+        <form action="../src/loginuser.php" method="POST">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required>
 
