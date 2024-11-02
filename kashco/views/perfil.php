@@ -20,12 +20,14 @@ $stmt->close();
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="../../public/assets/css/perfil.css">
 </head>
+
 <body>
     <section class="perfil-container">
         <h2>Bem-vindo, <?php echo htmlspecialchars($nome); ?></h2>
@@ -40,10 +42,14 @@ $stmt->close();
             <a href="historico_compras.php">Histórico de Compras</a>
             <a href="alterar_senha.php">Alterar Senha</a>
         </div>
+        <form action="../src/solicitaradm.php" method="post" style="margin-top: 20px;">
+            <button type="submit" class="botao-admin">Solicitar acesso como Administrador</button>
+        </form>
 
         <form action="../src/logout.php" method="post" style="margin-top: 20px;">
             <button type="submit" class="botao-sair">Sair da Conta</button>
         </form>
     </section>
 </body>
+
 </html>
