@@ -1,0 +1,53 @@
+/* perfil.css */
+
+.perfil-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+}
+
+.perfil-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.perfil-opcoes a, .botao-admin, .botao-sair {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-opcoes a {
+    background-color: #007bff;
+}
+
+.perfil-opcoes a:hover {
+    background-color: #0056b3;
+}
+
+.botao-admin {
+    background-color: #28a745;
+}
+
+.botao-admin:hover {
+    background-color: #218838;
+}
+
+.botao-sair {
+    background-color: #dc3545;
+}
+
+.botao-sair:hover {
+    background-color: #c82333;
+}

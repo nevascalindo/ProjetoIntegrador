@@ -1,4 +1,7 @@
 <?php
+require_once "./header/header.php"
+?>
+<?php
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
@@ -42,9 +45,12 @@ $stmt->close();
             <a href="historico_compras.php">Histórico de Compras</a>
             <a href="alterar_senha.php">Alterar Senha</a>
         </div>
-        <form action="../src/solicitaradm.php" method="post" style="margin-top: 20px;">
-            <button type="submit" class="botao-admin">Solicitar acesso como Administrador</button>
-        </form>
+
+        <?php if ($_SESSION['is_admin'] != 1): ?>
+            <form action="../src/solicitaradm.php" method="post" style="margin-top: 20px;">
+                <button type="submit" class="botao-admin">Solicitar acesso como Administrador</button>
+            </form>
+        <?php endif; ?>
 
         <form action="../src/logout.php" method="post" style="margin-top: 20px;">
             <button type="submit" class="botao-sair">Sair da Conta</button>

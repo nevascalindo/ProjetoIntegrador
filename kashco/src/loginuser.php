@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $id;
             $_SESSION['user_nome'] = $nome;
             $_SESSION['user_email'] = $email;
+            $_SESSION['is_admin'] = $is_admin;
             // Redireciona o usuário para a página inicial
             header("Location: ../views/index.php");
             exit(); // Finaliza o script após o redirecionamento
