@@ -7,9 +7,6 @@ $stmt = $conn->prepare("SELECT id, nome, descricao, preco, fotos FROM produtos")
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
     $stmt->close();
 
-    header("Location: admin_usuarios.php");
+    header("Location: adminusuarios.php");
     exit();
 }
 ?>
@@ -36,16 +36,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/assets/css/admeditar.css">
     <title>Editar Usuário</title>
 </head>
 <body>
-    <h2>Editar Usuário</h2>
+<div class="form-container">
+      <h2>Editar Usuário!</h2>
+      <br>
     <form method="post">
         <label>Nome:</label>
-        <input type="text" name="nome" value="<?php echo htmlspecialchars($nome); ?>" required>
+        <input type="text" name="nome" value="arthur" required>
         <label>Email:</label>
-        <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+        <input type="email" name="email" value="arthurhenriquerech@gmail.com" required>
         <button type="submit">Salvar</button>
     </form>
+    </div>
 </body>
 </html>

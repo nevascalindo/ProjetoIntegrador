@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../src/connect.php';
+require_once "./header/header.php";
 
 if (!isset($_SESSION['user_id']) || $_SESSION['is_admin'] != 1) {
     header("Location: login.php");
@@ -52,12 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar Produto</title>
-    <link rel="stylesheet" href="../../public/assets/css/cadastrarprod.css">
+    <title>Kash.Co | Cadastrar Produto</title>
+    <link rel="stylesheet" href="../public/assets/css/admcadastrar.css">
+    <link rel="stylesheet" href="cima.css">
     <style>
         #preview-container {
             display: flex;
@@ -79,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-    <h2>Cadastrar Novo Produto</h2>
+    <h2>Cadastrar Novo Produto!</h2>
     <form action="admincadastrarproduto.php" method="post" enctype="multipart/form-data">
         <label>Nome:</label>
         <input type="text" name="nome" required>
@@ -105,21 +108,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>Fotos do Produto:</label>
         <input type="file" name="fotos[]" multiple id="fotos" required>
 
-        <!-- Área de pré-visualização reordenável -->
         <div id="preview-container" class="sortable"></div>
 
         <button type="submit">Cadastrar Produto</button>
     </form>
 
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
     <script>
-        // Seleciona o campo de entrada de fotos e a div de visualização
         const fotosInput = document.getElementById('fotos');
         const previewContainer = document.getElementById('preview-container');
 
-        // Função para criar pré-visualizações de imagem
         fotosInput.addEventListener('change', () => {
-            previewContainer.innerHTML = ""; // Limpa a pré-visualização anterior
+            previewContainer.innerHTML = ""; 
             Array.from(fotosInput.files).forEach((file, index) => {
                 const reader = new FileReader();
                 reader.onload = (e) => {
@@ -127,8 +128,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     img.src = e.target.result;
                     img.style.width = '100px';
                     img.style.margin = '5px';
-                    img.draggable = true; // Permite arrastar a imagem
-                    img.setAttribute('data-index', index); // Atribui o índice para controle
+                    img.draggable = true; 
+                    img.setAttribute('data-index', index); 
 
                     const imgContainer = document.createElement('div');
                     imgContainer.appendChild(img);
@@ -138,11 +139,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
         });
 
-        // Torna a área de pré-visualização arrastável com Sortable
+    
         Sortable.create(previewContainer, {
             animation: 150,
             onEnd: () => {
-                // Atualiza a ordem de `data-index` após o arrastar
+                
                 Array.from(previewContainer.children).forEach((imgContainer, newIndex) => {
                     imgContainer.querySelector('img').setAttribute('data-index', newIndex);
                 });
@@ -151,3 +152,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </script>
 </body>
 </html>
+

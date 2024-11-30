@@ -22,7 +22,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Admin - Gerenciamento de Usuários</title>
-    <link rel="stylesheet" href="../../public/assets/css/admin.css">
+    <link rel="stylesheet" href="../../public/assets/css/admusuarios.css">
 </head>
 <body>
     <h2>Administração de Usuários</h2>
